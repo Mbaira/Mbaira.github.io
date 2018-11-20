@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html><head>
+	<title>Jeu Pierre Feuille Ciseaux</title>
+	<meta charset="utf-8">
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Pierre Feuille Ciseaux</title>
+	<script src="Jeu%20Pierre%20Feuille%20Ciseaux_fichiers/JS.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="Jeu%20Pierre%20Feuille%20Ciseaux_fichiers/stylle.css">
+	<style type="text/css">
+	section{
+		width:49%;
+		display: inline-block;
+	}
+	*{text-align: center;}
+</style>
+</head>
+<body>
+	<header>
+		<img src="... ">
+<class="now">
+		<div>
+			<span> <h1 style="color:blue;">Pierre Feuille Ciseaux</h1></span>
+		</div>
+		
+
+
+	</class="now"></header>
+
+
+	<section id="row">
+
+		<h2 style="color: red;">Joureur1</h2>
+
+		<button id="pierre">Pierre</button>
+		<button id="feuille">Feuille</button>
+		<button id="ciseaux">Ciseaux</button>
+
+		
+		<h2 id="message1">Ciseaux</h2>
+	</section>
+
+	<section id="row">
+		<h2 style="color: vert;">Joureur2</h2>
+		<button id="pierre2">Pierre</button>
+		<button id="feuille2">Feuille</button>
+		<button id="ciseaux2">Ciseaux</button>
+
+		<h2 id="message2">Ciseaux</h2>
+	</section>
+
+	<h2 id="res">Egalité</h2>
+
+	
+	<script>
+
+		var message1=document.getElementById("message1");
+		var pierre=document.getElementById("pierre");
+		var feuille=document.getElementById("feuille");
+		var ciseau=document.getElementById("ciseau");
+
+		var message2=document.getElementById("message2");
+		var pierre2=document.getElementById("pierre2");
+		var feuille2= document.getElementById("feuille2");
+		var ciseaux2=document.getElementById("ciseaux2");
+
+		var res = document.getElementById("res");
+		
+		function afficheRes1(mess) {
+			message1.innerHTML = mess;
+			afficheResGlobal();
+		}
+
+		function afficheRes2(mess){
+			message2.innerHTML = mess;
+			afficheResGlobal();
+		}
+
+		function afficheResGlobal(){
+			if(message1.innerHTML === message2.innerHTML){
+				res.innerHTML = "Egalité";
+
+			} else if (message1.innerHTML > message2.innerHTML){
+				res.innerHTML = "Joueur 1 gagne";
+			} else {
+				res.innerHTML = "Joueur 2 gagne";
+			}
+		}
+
+
+		pierre.addEventListener("click",function(){
+			afficheRes1(this.innerHTML);
+		});
+		feuille.addEventListener("click",function(){
+			afficheRes1(this.innerHTML);
+		});
+		ciseaux.addEventListener("click",function(){
+			afficheRes1(this.innerHTML);
+		});
+		ciseaux2.addEventListener("click",function(){
+			afficheRes2(this.innerHTML);
+		});
+		feuille2.addEventListener("click",function(){
+			afficheRes2(this.innerHTML);
+		});
+		pierre2.addEventListener("click",function(){
+			afficheRes2(this.innerHTML);
+		});
+	</script>
+	
+
+	  
+
+
+
+</body></html>
